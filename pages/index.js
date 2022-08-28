@@ -4,17 +4,18 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import Image from 'next/image';
 
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
-        <title>Home Him98 blog</title>
+        <title>Trang chủ | Him98</title>
       </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h2 className={utilStyles.headingLg}>Bài viết</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.map(({ id, date, title, thumbnail }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
@@ -23,6 +24,13 @@ export default function Home({ allPostsData }) {
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
               </small>
+              <Image
+                src={thumbnail}
+                alt="Picture of the author"
+                width={300}
+                height={300}
+                layout='responsive'
+              />
             </li>
           ))}
         </ul>
