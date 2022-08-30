@@ -24,13 +24,20 @@ export default function Home({ allPostsData }) {
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
               </small>
-              <Image
-                src={thumbnail}
-                alt="Picture of the author"
-                width={300}
-                height={300}
-                layout='responsive'
-              />
+              <div
+                className={
+                  'relative overflow-hidden w-full h-80 shadow-lg rounded-lg'
+                }
+              >
+                <Image
+                  src={thumbnail}
+                  alt="Picture of the author"
+                  width={300}
+                  height={300}
+                  layout='fill'
+                  className={'object-cover'}
+                />
+              </div>
             </li>
           ))}
         </ul>
