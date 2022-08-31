@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
@@ -13,17 +13,73 @@ export default function Home({ allPostsData }) {
         <title>Trang chủ | Him98</title>
       </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Bài viết</h2>
+        <h2 className={'text-2xl mb-4'}>Bài viết</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title, thumbnail }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
-                <a>{title}</a>
+                <a className={'text-gray-900 font-semibold hover:text-slate-900'}>
+                  {title}
+                </a>
               </Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <small className={'font-normal text-gray-600 block mb-1'}>
                 <Date dateString={date} />
               </small>
+              <div className={'mb-4'}>
+                <ul className={'list-none flex flex-wrap gap-3 text-sm'}>
+                  <li>
+                    <a href={'#'} className={utilStyles.linkHashTag}>
+                      <small>#hashTag1</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href={'#'} className={`${utilStyles.linkHashTag}`}>
+                      <small>#hash</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href={'#'} className={utilStyles.linkHashTag}>
+                      <small>#ha</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href={'#'} className={utilStyles.linkHashTag}>
+                      <small>#hashTag4988</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href={'#'} className={utilStyles.linkHashTag}>
+                      <small>#h</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href={'#'} className={utilStyles.linkHashTag}>
+                      <small>#Ta</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href={'#'} className={utilStyles.linkHashTag}>
+                      <small>#hashTa</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href={'#'} className={utilStyles.linkHashTag}>
+                      <small>#hhTag3</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href={'#'} className={utilStyles.linkHashTag}>
+                      <small>#hashT4</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href={'#'} className={utilStyles.linkHashTag}>
+                      <small>#has</small>
+                    </a>
+                  </li>
+                </ul>
+              </div>
               <div
                 className={
                   'relative overflow-hidden w-full h-80 shadow-lg rounded-lg'
@@ -34,7 +90,7 @@ export default function Home({ allPostsData }) {
                   alt="Picture of the author"
                   width={300}
                   height={300}
-                  layout='fill'
+                  layout="fill"
                   className={'object-cover'}
                 />
               </div>

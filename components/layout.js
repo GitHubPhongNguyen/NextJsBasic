@@ -12,10 +12,7 @@ export default function Layout({ children, home }) {
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Đây là blog cá nhân của Him98."
-        />
+        <meta name="description" content="Đây là blog cá nhân của Him98." />
         <meta property="og:image" content={`/images/profile.jpg`} />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -26,12 +23,11 @@ export default function Layout({ children, home }) {
             <Image
               priority
               src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
+              height={120}
+              width={120}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={'text-2xl font-extrabold tracking-widest text-slate-900'}>{name}</h1>
           </>
         ) : (
           <>
@@ -40,15 +36,34 @@ export default function Layout({ children, home }) {
                 <Image
                   priority
                   src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
+                  className={'rounded-bl-full'}
+                  height={100}
+                  width={100}
                   alt={name}
                 />
               </a>
             </Link>
           </>
         )}
+        <div className="block ml-auto mr-auto mb-6 mt-4">
+          <ul className={'list-none grid grid-cols-3 gap-4'}>
+            <li>
+              <Link href={'https://www.facebook.com/nguyenvanphong5998'}>
+                <a target="_blank">facebook</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={'https://www.youtube.com/channel/UCKvcAy7oZlTbfY5Krf1EhnQ'}>
+                <a target="_blank">youtube</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={'https://www.facebook.com/nguyenvanphong5998'}>
+                <a target="_blank">instagram</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
       </header>
       <main>{children}</main>
       {!home && (
