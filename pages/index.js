@@ -18,7 +18,7 @@ export default function Home({ allPostsData }) {
           {allPostsData.map(({ id, date, title, thumbnail }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
-                <a className={'text-gray-900 font-semibold hover:text-slate-900'}>
+                <a className={'text-gray-900 font-bold hover:text-slate-900'}>
                   {title}
                 </a>
               </Link>
@@ -27,7 +27,7 @@ export default function Home({ allPostsData }) {
                 <Date dateString={date} />
               </small>
               <div className={'mb-4'}>
-                <ul className={'list-none flex flex-wrap gap-3 text-sm'}>
+                <ul className={'list-none flex flex-wrap gap-2 sm:gap-3 text-sm'}>
                   <li>
                     <a href={'#'} className={utilStyles.linkHashTag}>
                       <small>#hashTag1</small>
