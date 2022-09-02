@@ -27,7 +27,7 @@ export default function Home({ allPostsData }) {
                 <Date dateString={date} />
               </small>
               <div className={'mb-4'}>
-                <ul className={'list-none flex flex-wrap gap-2 sm:gap-3 text-sm'}>
+                <ul className={'list-none flex flex-wrap gap-2 sm:gap-2 text-sm'}>
                   <li>
                     <a href={'#'} className={utilStyles.linkHashTag}>
                       <small>#hashTag1</small>

@@ -49,17 +49,17 @@ export default function Layout({ children, home }) {
           <ul className={'list-none grid grid-cols-3 gap-4'}>
             <li>
               <Link href={'https://www.facebook.com/nguyenvanphong5998'}>
-                <a target="_blank">facebook</a>
+                <a target="_blank" className={'text-slate-900 text-sm font-medium'}>facebook</a>
               </Link>
             </li>
             <li>
               <Link href={'https://www.youtube.com/channel/UCKvcAy7oZlTbfY5Krf1EhnQ'}>
-                <a target="_blank">youtube</a>
+                <a target="_blank" className={'text-slate-900 text-sm font-medium'}>youtube</a>
               </Link>
             </li>
             <li>
               <Link href={'https://www.facebook.com/nguyenvanphong5998'}>
-                <a target="_blank">instagram</a>
+                <a target="_blank" className={'text-slate-900 text-sm font-medium'}>instagram</a>
               </Link>
             </li>
           </ul>
