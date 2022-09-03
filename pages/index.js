@@ -11,6 +11,7 @@ export default function Home({ allPostsData }) {
     <Layout home>
       <Head>
         <title>Trang chủ | Him98</title>
+        <meta name="description" content="Đây là blog cá nhân của Him98." />
       </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={'text-2xl mb-4'}>Bài viết</h2>
